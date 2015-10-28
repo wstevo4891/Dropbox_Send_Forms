@@ -40,10 +40,14 @@ class DocumentsController < ApplicationController
                template: 'documents/edit.pdf.erb',
                wkhtmltopdf: 'route to wkhtmltopdf in your app',
 <<<<<<< HEAD
+<<<<<<< HEAD
                page_height: '10',
 =======
                page_height: '130',
 >>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
+=======
+               page_height: '10',
+>>>>>>> ff478d329a131eab71e02ed240f2e049765cf834
                page_width: '10em'
       end
     end     
@@ -58,10 +62,14 @@ class DocumentsController < ApplicationController
       if @document.save
         pdf = render_to_string pdf: "Required_Documents.pdf", layout: 'pdf.html.erb', template: "documents/edit.pdf.erb", 
 <<<<<<< HEAD
+<<<<<<< HEAD
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
 =======
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '75in', 
 >>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
+=======
+        encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
+>>>>>>> ff478d329a131eab71e02ed240f2e049765cf834
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
         File.open(save_path, 'wb') do |file|
@@ -88,10 +96,14 @@ class DocumentsController < ApplicationController
       if @document.update(document_params)
         pdf = render_to_string pdf: "Required_Documents.pdf", layout: 'pdf.html.erb', template: "documents/edit.pdf.erb", 
 <<<<<<< HEAD
+<<<<<<< HEAD
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
 =======
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '75in', 
 >>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
+=======
+        encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
+>>>>>>> ff478d329a131eab71e02ed240f2e049765cf834
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
         File.open(save_path, 'wb') do |file|
