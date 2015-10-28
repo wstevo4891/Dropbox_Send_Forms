@@ -39,7 +39,11 @@ class DocumentsController < ApplicationController
                layout: 'pdf.html.erb',
                template: 'documents/edit.pdf.erb',
                wkhtmltopdf: 'route to wkhtmltopdf in your app',
+<<<<<<< HEAD
                page_height: '10',
+=======
+               page_height: '130',
+>>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
                page_width: '10em'
       end
     end     
@@ -53,7 +57,11 @@ class DocumentsController < ApplicationController
     respond_to do |format|
       if @document.save
         pdf = render_to_string pdf: "Required_Documents.pdf", layout: 'pdf.html.erb', template: "documents/edit.pdf.erb", 
+<<<<<<< HEAD
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
+=======
+        encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '75in', 
+>>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
         File.open(save_path, 'wb') do |file|
@@ -79,7 +87,11 @@ class DocumentsController < ApplicationController
     respond_to do |format|
       if @document.update(document_params)
         pdf = render_to_string pdf: "Required_Documents.pdf", layout: 'pdf.html.erb', template: "documents/edit.pdf.erb", 
+<<<<<<< HEAD
         encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '10in', 
+=======
+        encoding: "UTF-8", wkhtmltopdf: 'route to wkhtmltopdf in your app', page_height: '75in', 
+>>>>>>> edc2396f3f4cba2d06e18f1906a5664aed72c096
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
         File.open(save_path, 'wb') do |file|
