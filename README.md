@@ -39,21 +39,9 @@ Step 6. Below "App Key" and "App Secret" you will see the "Oauth2" row. At the b
 "Generated Access token" and a "Generate" button beneath. Click on "Generate", copy the key, and
 paste it between the quotes on the OAUTH2_ACCESS_TOKEN line in dropbox_config.rb
 
-Step 7. Almost there! Now open app/controllers/documents_controller.rb. There are three lines that
-need editing in the edit, create, and update methods. 
-
-Each line reads: wkhtmltopdf: 'route to wkhtmltopdf in your app'
-
-This is the route to the 'wkhtmltopdf' gem for the app, and it will be different for everyone.
-
-My route looks like '/Users/my_user_name/.rvm/gems/ruby-2.2.2/bin/wkhtmltopdf'
-
-This is with using a Macbook, RVM for my ruby installation, and using Ruby version 2.2.2
-
-Once you have the right path for 'wkhtmltopdf' you're all set! Go to the app's home page, 
-create a user account, and complete the application form. You should see that a pdf of the form
-was uploaded to the Dropbox app you just created. A pdf file will also appear in the 'pdfs' folder
-in the root directory.
+You're all set!  Go to the app's home page, create a user account, and complete the application form. 
+You should see that a pdf of the form was uploaded to the Dropbox app you just created. A pdf file 
+will also appear in the 'pdfs' folder in the root directory.
 
 #More Info
 
@@ -64,4 +52,4 @@ Compare the examples there with what I did in the documents controller, and you 
 how it all works!
 
 Also look up 'wkhtmltopdf' for rails for more information on that gem. I use the 'wkhtmltopdf-binary' gem
-in this app, but there are plugins and other projects available.
+in this app, (the important file is in the /bin directory) but there are plugins and other projects available.

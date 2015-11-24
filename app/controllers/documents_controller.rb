@@ -38,7 +38,7 @@ class DocumentsController < ApplicationController
         render pdf: 'Required_Documents',   # Excluding ".pdf" extension.
                layout: 'pdf.html.erb',
                template: 'documents/edit.pdf.erb',
-               wkhtmltopdf: 'route to wkhtmltopdf in your app',
+               wkhtmltopdf: '/bin/wkhtmltopdf',
                page_height: '10',
                page_width: '10em'
       end
@@ -56,7 +56,7 @@ class DocumentsController < ApplicationController
         layout: 'pdf.html.erb', 
         template: "documents/edit.pdf.erb", 
         encoding: "UTF-8", 
-        wkhtmltopdf: 'route to wkhtmltopdf in your app', 
+        wkhtmltopdf: '/bin/wkhtmltopdf', 
         page_height: '10in', 
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
@@ -86,7 +86,7 @@ class DocumentsController < ApplicationController
         layout: 'pdf.html.erb', 
         template: "documents/edit.pdf.erb", 
         encoding: "UTF-8", 
-        wkhtmltopdf: 'route to wkhtmltopdf in your app', 
+        wkhtmltopdf: '/bin/wkhtmltopdf', 
         page_height: '10in', 
         page_width: '10em'
         save_path = Rails.root.join('pdfs',"#{filename}.Required_Documents.pdf")
